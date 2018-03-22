@@ -1,0 +1,54 @@
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+\usepackage{amsmath}
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% Configure page margins with geometry
+\geometry{left=2.54cm, top=.8cm, right=2.54cm, bottom=1.8cm, footskip=.5cm}
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+
+\name{Michael Nwani}{}
+
+\mobile{(518) 221-8168}
+\email{k.mnwani@gmail.com}
+\github{github.com/michaelnwani}
+\linkedin{linkedin.com/in/mnwani}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/technical.tex}
+\input{resume/experience.tex}
+\input{resume/projects.tex}
+\input{resume/education.tex}
+
+
+%-------------------------------------------------------------------------------
+\end{document}
