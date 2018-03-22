@@ -1,10 +1,22 @@
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[12pt, a4paper]{awesome-cv}
+
+% necessary for escaping %, &, and $:
 \usepackage{amsmath}
+\usepackage{fontspec}
+% \usepackage{xcolor}
+% \setmainfont[Ligatures=TeX]{Roboto}
+% main font for the document
+
+% don't know if this is actually doing anything:
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Path=/Library/Fonts/, ItalicFont=Chalkboard]{Chalkboard}
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
 % Configure page margins with geometry
-\geometry{left=2.54cm, top=.8cm, right=2.54cm, bottom=1.8cm, footskip=.5cm}
+\colorlet{awesome}{black}
+
+\geometry{left=2.54cm, top=1.0cm, right=2.54cm, bottom=1.8cm, footskip=.5cm}
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -39,6 +51,11 @@
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[C]
+
+\makecvfooter
+  {\today}
+  {}
+  {\thepage}
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
