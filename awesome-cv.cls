@@ -166,40 +166,46 @@
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
+  UprightFont=*,
+  ItalicFont=*-Oblique,
   BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
-]{Roboto}
+  BoldItalicFont=*-BoldOblique,
+]{Helvetica}
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
-  UprightFont=*-Thin,
-  ItalicFont=*-ThinItalic,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-MediumItalic,
-]{HelveticaNeue}
+  UprightFont=*-Light,
+  ItalicFont=*-LightOblique,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldOblique,
+]{Helvetica}
 
 % Set font for body (default is Source Sans Pro)
 \newfontfamily\bodyfont[
   Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
+  UprightFont=*,
+  ItalicFont=*-Oblique,
   BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic
-]{HelveticaNeue}
+  BoldItalicFont=*-BoldOblique
+]{Helvetica}
 
 \newfontfamily\bodyfontlight[
   Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-LightItalic,
+  UprightFont=*,
+  ItalicFont=*-Oblique,
   BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic
-]{HelveticaNeue}
+  BoldItalicFont=*-BoldOblique
+]{Helvetica}
 
+\newfontfamily\footerfont[
+  Path=\@fontdir,
+  UprightFont=*,
+  ItalicFont=*-Oblique,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldOblique
+]{Helvetica}
 
-\newcommand*{\footerfont}{\sourcesanspro}
-% \newcommand*{\bodyfont}{\sourcesanspro}
+% \newcommand*{\footerfont}{\sourcesanspro}
 % \newcommand*{\bodyfont}{\sourcesanspro}
 % \newcommand*{\bodyfontlight}{\sourcesansprolight}
 
