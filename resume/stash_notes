@@ -1,0 +1,18 @@
+////////////////////////////////// Skills //////////////////////////////////
+- DevOps: CircleCI, Docker Compose, Terraform, AWS (API Gateway, Aurora, Cloudwatch, ECR, Fargate, Lambda, Kinesis, Kinesis Firehose, S3, SQS, RDS, ElasticSearch, ElastiCache for Redis, Route 53, Secrets Manager), Sentry, Sumo Logic, Flyway, Locust
+- Backend & Tools: Ruby, Rails, Scala (Akka HTTP/Streams, Doobie JDBC Layer, Cats, sbt), Java, Python, Swagger, MongoDB
+- Frontend: Vue, Express, Sass
+- Mobile: Kotlin, Swift, Retrofit, MVVM, Dependency injection
+
+////////////////////////////////// Experience for Stash //////////////////////////////////
+ 
+- Architected a Scala service that powers a cash back reward program, which increased ARPU. Created the CI/CD pipeline with CircleCI, Terraform, and Flyway for database migrations. Integrated the Python Locust framework for load testing, Sentry for error tracking, and Sumo Logic/AWS Cloudwatch for logging. Bridged multiple AWS services in order to properly integrate with a 3rd party rewards provider, and to dispense funds to users: AWS API Gateway, Lambda, Kinesis, Kinesis Firehose, S3.
+
+- Architected a Scala microservice dependency to interact with the Braze Messaging API on behalf of numerous services. Utilized AWS SQS and Akka Streams for message funneling and throttling.
+
+
+////////////////////////////////// Misc //////////////////////////////////
+- get rid of last IBM bullet
+- break down earlier job positions
+- fix formatting, then see what space (if any) is left for side project. Find a way to include it.
+

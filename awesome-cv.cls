@@ -122,10 +122,9 @@
 % Gray-scale colors
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{black}{HTML}{000000}
-\definecolor{darkgray}{HTML}{000000}
-\definecolor{gray}{HTML}{000000}
+\definecolor{darkgray}{HTML}{333333}
+\definecolor{gray}{HTML}{5D5D5D}
 \definecolor{lightgray}{HTML}{999999}
-% \definecolor{lightgray}{HTML}{000000}
 % Basic colors
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
@@ -165,45 +164,54 @@
 \newfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
-  Path=\@fontdir,
-  UprightFont=*,
-  ItalicFont=*-Oblique,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldOblique,
-]{Helvetica}
+  Path = /System/Library/Fonts/,
+  UprightFeatures = {FontIndex=0},
+  ItalicFeatures = {FontIndex=1},
+  BoldFeatures = {FontIndex=3},
+  BoldItalicFeatures = {FontIndex=3},
+  SlantedFeatures = {FontIndex=0},
+  BoldSlantedFeatures = {FontIndex=4},
+]{Helvetica.ttc}
 
 \newfontfamily\headerfontlight[
-  Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-LightOblique,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldOblique,
-]{Helvetica}
+  Path = /System/Library/Fonts/,
+  UprightFeatures = {FontIndex=0},
+  ItalicFeatures = {FontIndex=1},
+  BoldFeatures = {FontIndex=3},
+  BoldItalicFeatures = {FontIndex=3},
+  SlantedFeatures = {FontIndex=0},
+  BoldSlantedFeatures = {FontIndex=4},
+]{Helvetica.ttc}
 
-% Set font for body (default is Source Sans Pro)
 \newfontfamily\bodyfont[
-  Path=\@fontdir,
-  UprightFont=*,
-  ItalicFont=*-Oblique,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldOblique
-]{Helvetica}
+  Path = /System/Library/Fonts/,
+  UprightFeatures = {FontIndex=0},
+  ItalicFeatures = {FontIndex=1},
+  BoldFeatures = {FontIndex=3},
+  BoldItalicFeatures = {FontIndex=3},
+  SlantedFeatures = {FontIndex=0},
+  BoldSlantedFeatures = {FontIndex=4},
+]{Helvetica.ttc}
 
 \newfontfamily\bodyfontlight[
-  Path=\@fontdir,
-  UprightFont=*,
-  ItalicFont=*-Oblique,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldOblique
-]{Helvetica}
+  Path = /System/Library/Fonts/,
+  UprightFeatures = {FontIndex=0},
+  ItalicFeatures = {FontIndex=1},
+  BoldFeatures = {FontIndex=3},
+  BoldItalicFeatures = {FontIndex=3},
+  SlantedFeatures = {FontIndex=0},
+  BoldSlantedFeatures = {FontIndex=4},
+]{Helvetica.ttc}
 
 \newfontfamily\footerfont[
-  Path=\@fontdir,
-  UprightFont=*,
-  ItalicFont=*-Oblique,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldOblique
-]{Helvetica}
+  Path = /System/Library/Fonts/,
+  UprightFeatures = {FontIndex=0},
+  ItalicFeatures = {FontIndex=1},
+  BoldFeatures = {FontIndex=3},
+  BoldItalicFeatures = {FontIndex=3},
+  SlantedFeatures = {FontIndex=0},
+  BoldSlantedFeatures = {FontIndex=4},
+]{Helvetica.ttc}
 
 % \newcommand*{\footerfont}{\sourcesanspro}
 % \newcommand*{\bodyfont}{\sourcesanspro}
@@ -226,11 +234,11 @@
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{black} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{black} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{black} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\slshape\color{black} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{black} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -296,7 +304,7 @@
 \newcommand*{\address}[1]{\def\@address{#1}}
 
 % Define writer's position
-% Usage: \name{<position>}
+% Usage: \position{<position>}
 \newcommand*{\position}[1]{\def\@position{#1}}
 
 % Defines writer's mobile (optional)
@@ -304,7 +312,7 @@
 \newcommand*{\mobile}[1]{\def\@mobile{#1}}
 
 % Defines writer's email (optional)
-% Usage: \email{<email adress>}
+% Usage: \email{<email address>}
 \newcommand*{\email}[1]{\def\@email{#1}}
 
 % Defines writer's homepage (optional)
@@ -329,6 +337,7 @@
 % Usage: \linkedin{<linked-in-nick>}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 
+% Defines writer's twitter (optional)
 % Usage: \twitter{<twitter handle>}
 \newcommand*{\twitter}[1]{\def\@twitter{#1}}
 
@@ -344,7 +353,25 @@
 % Usage: \xing{<xing name>}
 \newcommand*{\xing}[1]{\def\@xing{#1}}
 
-% Defines writer's twitter (optional)
+% Defines writer's medium profile (optional)
+% Usage: \medium{<medium account>}
+\newcommand*{\medium}[1]{\def\@medium{#1}}
+
+% Defines writer's google scholar profile (optional)
+% Usage: \googlescholar{<googlescholar userid>}{<googlescholar username>}
+% e.g.https://scholar.google.co.uk/citations?user=wpZDx1cAAAAJ
+% would be \googlescholar{wpZDx1cAAAAJ}{Name-to-display-next-icon}
+% If 'googlescholar-name' is not provided than it defaults to
+% '\firstname \lastname'
+\newcommand*{\googlescholar}[2]{%
+  \def\@googlescholarid{#1}%
+  \ifthenelse{\equal{#2}{}}{%
+    \def\@googlescholarname{\@firstname~\@lastname}%
+  }{%
+    \def\@googlescholarname{#2}%
+  }%
+}
+
 % Defines writer's extra informations (optional)
 % Usage: \extrainfo{<extra informations>}
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
@@ -434,7 +461,7 @@
         {\setlength{\photodim}{1.3cm}}%
         {\setlength{\photodim}{1.8cm}}%
       \ifthenelse{\equal{\@photoedge}{edge}}%
-        {\def\@photoborder{black}}%
+        {\def\@photoborder{darkgray}}%
         {\def\@photoborder{none}}%
       \begin{tikzpicture}%
         \node[\@photoshape, draw=\@photoborder, line width=0.3mm, inner sep=\photodim, fill overzoom image=\@photo] () {};
@@ -528,6 +555,18 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.xing.com/profile/\@xing}{\faXingSquare\acvHeaderIconSep\@xing}
         }%
+      \ifthenelse{\isundefined{\@medium}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://medium.com/@\@medium}{\faMedium\acvHeaderIconSep\@medium}%
+        }%
+      \ifthenelse{\isundefined{\@googlescholarid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://scholar.google.com/citations?user=\@googlescholarid}{\faGraduationCap\acvHeaderIconSep\@googlescholarname}%
+        }%
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
         {%
@@ -557,11 +596,9 @@
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
   \vspace{\acvSectionTopSkip}
-  \hspace*{-16pt}\sectionstyle{#1}
+  \sectionstyle{#1}
   \phantomsection
-  \lineunder
-  \vspace{-3mm}
-  % \color{black}\vhrulefill{0.9pt}
+  \color{gray}\vhrulefill{0.9pt}
 }
 
 % Define a subsection for CV
@@ -694,7 +731,7 @@
   \par\addvspace{2.5ex}
   \phantomsection{}
   \lettersectionstyle{#1}
-  \color{black}\vhrulefill{0.9pt}
+  \color{gray}\vhrulefill{0.9pt}
   \par\nobreak\addvspace{0.4ex}
 }
 
